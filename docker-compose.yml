@@ -1,0 +1,15 @@
+version: '3'
+services:
+  wordpress:
+    container_name: wp-service
+    image: wordpress
+    ports:
+      - "9090:80"
+    environment:
+      WORDPRESS_DB_HOST: db-service
+      WORDPRESS_DB_PASSWORD: Manoj523
+  db-service:
+    container_name: mysql
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: Manoj523
